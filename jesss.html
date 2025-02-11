@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jesss.css"> <!-- Подключение CSS файла -->
+
+</head>
+<body>
+    <div class="backgr">
+        <div class="fon">
+            <div class="menu">
+                <div class="menu-left">
+                    <a href="#">Скоро будет</a>
+                    <a href="#">В наличие</a>
+                    <a href="#" id="contact-link">Контакты</a> <!-- Добавляем ID для ссылки -->
+                </div>
+                <div class="menu-right">
+                    <input type="text" placeholder="Поищем?">
+                    <button>Найти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Кнопка закрытия -->
+            <img src="Fra 1.svg" alt="Контакты"> <!-- Замените your-image.jpg на путь к вашей фотографии -->
+        </div>
+    </div>
+
+    <script>
+        // Получаем элементы
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("contact-link");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Когда пользователь нажимает на ссылку "Контакты", открываем модальное окно
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Когда пользователь нажимает на кнопку закрытия, закрываем модальное окно
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Когда пользователь нажимает в любом месте вне модального окна, закрываем его
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

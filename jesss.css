@@ -1,0 +1,94 @@
+.backgr {
+    background-color: aliceblue;
+    width: 1000px;
+    height: 6000px;
+}
+
+.fon {
+    background-image: url(NACH.svg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Заполняет весь контейнер, сохраняя пропорции */
+    background-position: center; /* Центрирует изображение */
+    width: 100vw;
+    height: 100vh;
+    padding-top: 900px; /* Возможно, стоит пересмотреть это значение */
+}
+
+.menu {
+    display: flex; /* Используем Flexbox для расположения меню */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    padding: 100px; /* Отступы для меню */
+    font-size: 120px; /* Увеличиваем размер шрифта */
+    font-style: normal;
+    background-color: rgba(255, 255, 255, 0.8); /* Цвет фона меню с небольшим уровнем прозрачности */
+}
+
+.menu-left a {
+    margin-right: 350px; /* Отступы между элементами меню */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: black; /* Цвет текста */
+    transition: color 0.3s, background-color 0.3s; /* Плавный переход цвета */
+    padding: 10px 20px; /* Добавляем отступы для элементов меню */
+}
+
+.menu-left a:hover {
+    color: white; /* Цвет текста при наведении */
+    background-color: rgb(129, 125, 125); /* Цвет фона при наведении */
+    border-radius: 20%; /* Скругление углов */
+}
+
+.menu-right {
+    display: flex; /* Используем Flexbox для элементов поиска */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+}
+
+.menu-right input {
+    margin-right: 10px; /* Отступ между полем ввода и кнопкой */
+    padding: 60px; /* Увеличиваем отступ внутри поля ввода (в 4 раза) */
+    font-size: 100px; /* Увеличиваем размер шрифта */
+}
+
+.menu-right button {
+    padding: 20px 40px; /* Увеличиваем отступ внутри кнопки (в 4 раза) */
+    font-size: 100px; /* Увеличиваем размер шрифта */
+}
+
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включаем прокрутку при необходимости */
+    background-color: rgba(0,0,0,0.4); /* Черный фон с прозрачностью */
+    background-size: cover;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% сверху и центрируем */
+    padding: 200px;
+    border: 1px solid #888;
+    width: 2%; /* Ширина модального окна (возможно, стоит увеличить) */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%; /* Ограничиваем ширину изображения */
+}
